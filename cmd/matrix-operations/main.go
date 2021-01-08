@@ -2,7 +2,7 @@ package main
 
 import (
 	"log"
-	"matrix-operations/internal/http_operations"
+	"matrix-operations/pkg/http_operations"
 	"net/http"
 )
 

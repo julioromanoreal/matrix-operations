@@ -1,7 +1,7 @@
 package matrix_utils
 
 import (
-	"matrix-operations/internal/file_utils"
+	"matrix-operations/pkg/file_utils"
 	"net/http"
 )
 

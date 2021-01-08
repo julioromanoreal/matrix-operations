@@ -2,12 +2,12 @@ package http_operations
 
 import (
 	"fmt"
-	"matrix-operations/internal/matrix_operations"
-	"matrix-operations/internal/matrix_utils"
+	"matrix-operations/pkg/matrix_operations"
+	"matrix-operations/pkg/matrix_utils"
 	"net/http"
 )
 
-func flatten(w http.ResponseWriter, r *http.Request) {
+func multiply(w http.ResponseWriter, r *http.Request) {
 	records, ok := matrix_utils.ParseMatrix(w, r)
 	if !ok {
 		fmt.Fprintf(w, "error: not able to read the file")
@@ -15,7 +15,7 @@ func flatten(w http.ResponseWriter, r *http.Request) {
 	}
 
 	ops := matrix_operations.GetMatrixOperations()
-	val, err := ops.Flatten(records)
+	val, err := ops.Multiply(records)
 	if err != nil {
 		fmt.Fprintf(w, "error: %v", err.Error())
 		return

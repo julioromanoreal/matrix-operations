@@ -2,7 +2,7 @@ package matrix_operations
 
 import (
 	"fmt"
-	"matrix-operations/internal/matrix_utils"
+	"matrix-operations/pkg/matrix_utils"
 	"strconv"
 	"strings"
 	"sync"

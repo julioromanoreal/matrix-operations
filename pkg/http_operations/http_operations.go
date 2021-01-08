@@ -2,14 +2,21 @@ package http_operations
 
 import (
 	"log"
-	"matrix-operations/pkg"
 	"net/http"
 )
+
+type HttpOperations interface {
+	Echo(http.ResponseWriter, *http.Request)
+	Flatten(http.ResponseWriter, *http.Request)
+	Invert(http.ResponseWriter, *http.Request)
+	Sum(http.ResponseWriter, *http.Request)
+	Multiply(http.ResponseWriter, *http.Request)
+}
 
 type httpOperationsImpl struct {
 }
 
-func GetHttpOperations() pkg.HttpOperations {
+func GetHttpOperations() HttpOperations {
 	ops := &httpOperationsImpl{}
 	return ops
 }

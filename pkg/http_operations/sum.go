@@ -2,8 +2,8 @@ package http_operations
 
 import (
 	"fmt"
-	"matrix-operations/internal/matrix_operations"
-	"matrix-operations/internal/matrix_utils"
+	"matrix-operations/pkg/matrix_operations"
+	"matrix-operations/pkg/matrix_utils"
 	"net/http"
 )
 
